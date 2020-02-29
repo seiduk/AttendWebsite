@@ -1,0 +1,43 @@
+<!doctype html>
+	<html>
+		<head>
+			<script type="text/javascript">
+				function returnName(){
+					var a,b,c;
+					a=String(document.getElementById("first").value);
+					b=String(document.getElementById("second").value);
+					c = a + " " + b;
+                    document.getElementById("answer").value = c;
+
+                }
+                function isPresent() {
+                       alert("You have made it inside the isPresent() function!!");
+                }
+				
+                function writeToFile() {
+                    file = fopen("GitHub\AttendApp\framework.txt");
+					file_length = flength(file);
+					content = fread(file, file_length);
+					document.getElementById("myDiv").innerText = content;
+
+                    //var fh = fopen("D:\GitHub\AttendApp\framework.txt");
+
+                     
+					//fwrite(fh, message); // Write the string to a file
+					//fclose(fh); // close
+                    alert("You made it to the write file method!!");
+				}
+				
+       
+			</script>
+		</head>
+		<body>
+			Enter the First name : <input id="first">
+			Enter the last name : <input id="second">
+			<button onclick="returnName()">Return name</button>
+			<input id="answer">
+			<button onclick="isPresent()">Present</button>
+			<button onclick="writeTofile()">To File</button>
+			<div id="myDiv"></div>
+		</body>
+</html>
